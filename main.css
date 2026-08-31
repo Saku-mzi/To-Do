@@ -5,10 +5,13 @@
 
 body {
   background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   width: 80dvw;
-  height: 90dvh;
+  height: 80dvh;
   background-color: rgb(255, 255, 255);
 }
