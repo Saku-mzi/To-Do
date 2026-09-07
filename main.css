@@ -99,12 +99,11 @@ p {
   height: 20px;
   overflow: hidden;
   border-radius: 30px;
-  background-color: #f0f0f0;
   border: 2px solid rgb(117, 117, 117);
 }
 
 .completion {
-  background-color: #d3cccb;
+  background-color: #c5c5c5;
   width: 0;
   height: 100%;
   border-radius: 30px;
