@@ -3,15 +3,6 @@ const input = document.getElementById("todoInput");
 const list = document.getElementById("todoList");
 const completion = document.querySelector(".completion");
 
-function updateProgress() {
-  const todos = list.querySelectorAll("li");
-  const completedTodos = list.querySelectorAll("li.done");
-  const percentage =
-    todos.length === 0 ? 0 : (completedTodos.length / todos.length) * 100;
-
-  completion.style.width = `${percentage}%`;
-}
-
 form.onsubmit = function (e) {
   e.preventDefault();
   if (input.value.trim() === "") return;
@@ -20,7 +11,6 @@ form.onsubmit = function (e) {
   li.innerHTML = "<span></span><button>×</button>";
   li.firstChild.textContent = input.value;
   list.prepend(li);
-  updateProgress();
 
   input.value = "";
 };
@@ -28,10 +18,11 @@ form.onsubmit = function (e) {
 list.onclick = function (e) {
   let li = e.target.closest("li");
   if (e.target.tagName === "BUTTON") {
-    li.remove();
+    li.classList.add("fade");
+    setTimeout(function () {
+      li.remove();
+    }, 1500);
   } else {
     li.classList.toggle("done");
   }
-
-  updateProgress();
 };

@@ -61,9 +61,13 @@ li {
   padding: 10px 5px;
   border-bottom: 2px solid #e2e2e2;
   cursor: pointer;
+  transition: all 2s ease;
 }
 li.done {
   opacity: 0.5;
+}
+li.fade {
+  opacity: 0;
 }
 
 li span {
@@ -72,7 +76,7 @@ li span {
 
 li.done span {
   text-decoration: line-through;
-  color: #999;
+  color: #a79191;
 }
 
 li button {
@@ -84,7 +88,7 @@ li button {
 }
 
 li button:hover {
-  color: #cc4c3e;
+  color: #e71d06;
 }
 
 p {
