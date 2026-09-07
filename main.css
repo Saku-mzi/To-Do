@@ -24,13 +24,13 @@ h1 {
   margin-bottom: 15px;
 }
 
-form {
+.todo-entry {
   display: flex;
   gap: 8px;
   margin-bottom: 15px;
 }
 
-form input {
+.todo-entry input {
   flex: 1;
   padding: 10px;
   font-size: 15px;
@@ -38,7 +38,7 @@ form input {
   border-radius: 5px;
 }
 
-form button {
+.todo-entry button {
   padding: 10px 15px;
   font-size: 15px;
   background: #9da5ad;
@@ -46,38 +46,53 @@ form button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
-  button:hover {
-    opacity: 0.7;
-  }
 }
 
-ul {
-  list-style: none;
+.todo-entry button:hover {
+  opacity: 0.7;
 }
 
-li {
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 10px 5px;
   border-bottom: 2px solid #e2e2e2;
-  cursor: pointer;
 }
-li.done {
+
+.todo-item.done {
   opacity: 0.5;
 }
 
-li span {
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-text {
   flex: 1;
 }
 
-li.done span {
+.todo-item.done .todo-text {
   text-decoration: line-through;
   color: #999;
 }
 
-li button {
+.todo-check {
+  accent-color: #9da5ad;
+}
+
+.todo-delete {
   background: none;
   border: none;
   color: #999;
@@ -85,7 +100,7 @@ li button {
   cursor: pointer;
 }
 
-li button:hover {
+.todo-delete:hover {
   color: #e74c3c;
 }
 
