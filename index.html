@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Do Something</title>
+    <title>To Do</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <main>
-      <div id="addSomething">
+    <div class="container">
+      <h1>To Do</h1>
+
+      <form id="todoForm">
         <input
           type="text"
-          placeholder="click here to add text"
-          required
-        /><button type="button">yes</button>
-      </div>
-    </main>
-    <script type="module" defer src="main.js"></script>
+          id="todoInput"
+          placeholder="ngwala something"
+          autocomplete="off"
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <ul id="todoList"></ul>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
