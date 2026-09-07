@@ -6,6 +6,9 @@
 body {
   font-family: Arial, sans-serif;
   padding: 10% 10%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .container {
@@ -84,4 +87,26 @@ li button {
 
 li button:hover {
   color: #e74c3c;
+}
+
+p {
+  margin-top: 50px;
+}
+
+.cover {
+  margin-top: 10px;
+  width: 65%;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #f0f0f0;
+  border: 2px solid rgb(117, 117, 117);
+}
+
+.completion {
+  background-color: #d3cccb;
+  width: 0;
+  height: 100%;
+  border-radius: 30px;
+  transition: width 1s ease;
 }
