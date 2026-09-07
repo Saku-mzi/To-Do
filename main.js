@@ -19,7 +19,7 @@ form.onsubmit = function (e) {
   let li = document.createElement("li");
   li.innerHTML = "<span></span><button>×</button>";
   li.firstChild.textContent = input.value;
-  list.appendChild(li);
+  list.prepend(li);
   updateProgress();
 
   input.value = "";
